@@ -1,6 +1,6 @@
 # MLPR Lab 5: Face Detection and Clustering
 
-This repository contains the work for Lab 5 of the Machine Learning and Pattern Recognition (MLPR) course. The primary focus of this lab is face detection and unsupervised clustering using color features.
+This repository contains the work for Labs of the Machine Learning and Pattern Recognition (MLPR) course. The primary focus of this lab(Lab-5) is face detection and unsupervised clustering using color features.
 
 ## Aim
 The objective of this lab is to:
