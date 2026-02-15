@@ -27,19 +27,37 @@ A separate image (`Dr_Shashi_Tharoor.jpg`) was used as a template. We detected t
 
 ## Key Findings
 
-### Face Clustering Visualization
-The plot below shows the distribution of detected faces on the Hue-Saturation plane. Each face is represented by its own image marker, showing how the algorithm groups them.
+### 1. Initial Face Detection
+Using Haar-cascade classifiers, we successfully identified face regions in the group image.
+
+### 2. Feature Visualization (Hue vs. Saturation)
+The plot below shows each detected face mapped onto the Hue-Saturation space. Individual face thumbnails are used as markers to visually correlate color profiles with their position in the feature space.
 
 ![Face Clustering with Markers](media/plot_1.png)
 
-### Cluster Separation
-The following visualization shows the data points colored by their assigned cluster, along with the calculated centroids.
+### 3. k-Means Clustering Results
+The algorithm was tasked with grouping the faces into two distinct clusters.
 
-![Cluster Separation](media/plot_4.png)
+**Cluster Distribution:**
+The points are colored by their cluster assignment (Green vs. Blue), with red and orange markers indicating the centroids.
+
+![Cluster Points and Centroids](media/plot_2.png)
+
+### 4. Template Image Analysis
+A template image of Dr. Shashi Tharoor was processed using the same pipeline.
+
+**Template Detection:**
+![Template Detection](media/plot_3.png)
+
+**Final Result & Classification:**
+The template face's Hue and Saturation were plotted (Violet circle) relative to the existing clusters to determine its class assignment.
+
+![Final Template Matching](media/plot_4.png)
 
 ## Conclusions
 - **Color Feature Effectiveness:** Hue and Saturation are effective low-level features for initial image clustering tasks where color distribution is a primary differentiator.
 - **Unsupervised Learning:** k-Means successfully identified inherent groupings in the face data without pre-labeled categories.
+- **Robustness:** The model successfully classified the template image into one of the pre-defined color clusters based on its mean HSV values.
 - **Applications:** This methodology can be extended to automated photo organization, skin tone analysis, and lighting normalization in computer vision pipelines.
 
 ---
